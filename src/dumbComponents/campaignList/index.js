@@ -22,9 +22,9 @@ class CampaignList extends Component {
           </thead>
           <tbody>
 
-            {campaigns.map((campaign) => {
+            {campaigns && campaigns.map((campaign, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td>{campaign.name}</td>
                   <td>{campaign.type}</td>
                   <td>{campaign.company}</td>

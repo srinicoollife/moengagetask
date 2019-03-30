@@ -11,7 +11,7 @@ class App extends Component {
     this.props.fetchCampaigns();
   }
   render() {
-    console.log(this.props.data)
+    // console.log(this.props.data)
     return(
     <div className="wrapper">
      {
@@ -21,8 +21,8 @@ class App extends Component {
         </div>) : ''
      }
      <Search/>
-     <CampaignList campaigns={this.props.data}/>
-     <Pagination total={this.props.data.length}/>
+     <CampaignList campaigns={this.props.filterdata}/>
+     <Pagination total={this.props.data ? this.props.data.length : 0}/>
     </div>
     )
   }

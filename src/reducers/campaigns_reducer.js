@@ -3,7 +3,8 @@ import _ from "lodash"
 const initialState={
   error: null,
   data: [],
-  searchString : ""
+  searchString : "",
+  currentPage: 1
 }
 
 export default function campaigns(state = initialState, action){
@@ -22,6 +23,8 @@ export default function campaigns(state = initialState, action){
       return {...state, error: null, data: data };
     case "SET_SEARCH_STRING":
       return {...state, searchString: action.data}
+    case "SET_CURRENT_PAGE":
+      return {...state, currentPage: action.data}
     default:
       return state;
   }

@@ -6,12 +6,16 @@ export function fetchedCampaigns(campaigns) {
 }
 
 export function campaignDelete(campaignId) {
-	console.log(campaignId)
+	// console.log(campaignId)
 	return { type:"CAMPAIGN_DELETE", data: campaignId}	
 }
 
 export function setSearchString(searchString) {
 	return { type:"SET_SEARCH_STRING", data: searchString}
+}
+
+export function navigate(pagenNo){
+	return { type:"SET_CURRENT_PAGE", data: pagenNo}
 }
 
 export function fetchCampaigns() {
