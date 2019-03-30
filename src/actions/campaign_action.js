@@ -10,6 +10,10 @@ export function campaignDelete(campaignId) {
 	return { type:"CAMPAIGN_DELETE", data: campaignId}	
 }
 
+export function setSearchString(searchString) {
+	return { type:"SET_SEARCH_STRING", data: searchString}
+}
+
 export function fetchCampaigns() {
 	return (dispatch) => {
 		dispatch(startLoader())

@@ -10,6 +10,7 @@ import thunk from "redux-thunk"
 import routes from "./routes"
 import "./css/index.css"
 import Reducer from './reducers/rootReducer'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const logger = createLogger({
 	collapsed: true,

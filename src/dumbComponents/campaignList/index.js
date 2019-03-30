@@ -10,7 +10,7 @@ class CampaignList extends Component {
     console.log(campaigns);
     // campaigns.map(campaign => console.log(campaign.name))
     return(
-      <div class="container">
+      <div class="container" id="campaigns">
         <table class="table table-striped" style={{width: '100%'}}>
           <thead>
             <tr>

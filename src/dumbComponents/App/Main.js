@@ -3,6 +3,8 @@ import container from "../../components/campaigns"
 
 // componenets import
 import CampaignList from "../campaignList"
+import Search from "../search"
+import Pagination from "../pagination"
 
 class App extends Component {
   componentDidMount(){
@@ -18,7 +20,9 @@ class App extends Component {
            <div className="loader"><p>loading ...</p></div>
         </div>) : ''
      }
+     <Search/>
      <CampaignList campaigns={this.props.data}/>
+     <Pagination total={this.props.data.length}/>
     </div>
     )
   }

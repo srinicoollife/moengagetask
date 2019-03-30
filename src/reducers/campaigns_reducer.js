@@ -3,6 +3,7 @@ import _ from "lodash"
 const initialState={
   error: null,
   data: [],
+  searchString : ""
 }
 
 export default function campaigns(state = initialState, action){
@@ -19,6 +20,8 @@ export default function campaigns(state = initialState, action){
       });
       console.log(data.length)
       return {...state, error: null, data: data };
+    case "SET_SEARCH_STRING":
+      return {...state, searchString: action.data}
     default:
       return state;
   }
