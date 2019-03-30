@@ -9,13 +9,21 @@ function filterData (campaigns, searchString, currentPage) {
    	});
    	let data =_.chunk(results,10);
    	console.log(currentPage-1)
-   	return data[currentPage-1];
+   	return {
+   	 'displayData': data[currentPage-1],
+   	 'filteredData': results
+   	};
 }
 
 function mapStateToProps(state){
+	const {displayData, filteredData} = filterData(state.campaigns.data, state.campaigns.searchString, state.campaigns.currentPage);
+	console.log("----")
+	console.log(displayData)
+	console.log(filteredData)
 	return {
 		data : state.campaigns.data,
-		filterdata: filterData(state.campaigns.data, state.campaigns.searchString, state.campaigns.currentPage),
+		displayData: displayData,
+		filterData: filteredData,
 		loading: state.loader.loading,
 		error: state.campaigns.error,
 	}

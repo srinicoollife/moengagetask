@@ -21,8 +21,8 @@ class App extends Component {
         </div>) : ''
      }
      <Search/>
-     <CampaignList campaigns={this.props.filterdata}/>
-     <Pagination total={this.props.data ? this.props.data.length : 0}/>
+     <CampaignList campaigns={this.props.displayData}/>
+     <Pagination total={this.props.filterData ? this.props.filterData.length : 0}/>
     </div>
     )
   }
